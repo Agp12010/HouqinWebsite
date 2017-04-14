@@ -26,11 +26,11 @@ gulp.task('js', function() {
 })
 
 gulp.task('less', function() {
-  gulp.src('less/*.less')
+  gulp.src('less/index.less')
       .pipe(sourceMap.init())
       .pipe(less())
       .pipe(sourceMap.write())
-      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('dist/css/'))
       .pipe(connect.reload());
 })
 
@@ -55,4 +55,4 @@ gulp.task('connect', function() {
   })
 })
 
-gulp.task('default', ['html', 'js', 'image', 'watch', 'connect', 'copy']);
+gulp.task('default', ['html', 'js', 'image', 'watch', 'connect', 'copy', 'less']);
