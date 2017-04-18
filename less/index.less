@@ -5,6 +5,8 @@
 @import "intro.less";
 @import "contact.less";
 @import "footer.less";
+@import "list.less";
+@import "content.less";
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +17,14 @@ html body {
 
 a {
   text-decoration: none;
+  color: black;
+  &:hover {
+    color: blue;
+  }
 }
 
 @media screen and (max-width: 1120px) {
-    .footer,.toper,.intro,.news,.contact {
+    .list,.footer,.toper,.intro,.news,.contact {
       width: 1120px;
     }
 }
